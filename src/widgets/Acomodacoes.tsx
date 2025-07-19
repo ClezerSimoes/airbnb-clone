@@ -1,3 +1,4 @@
+import Acomodacao from "@/components/Acomodacao"
 import Image from "next/image"
 
 const acomodacoes = [
@@ -2260,18 +2261,28 @@ const acomodacoes = [
     }
 ]
 
-const Acomodacao = () => {
+const Acomodacoes = () => {
     return (
         <section className="py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {acomodacoes.map((acomodacao, indice) => (
                 <div key={indice}>
-                    <Image className="w-full aspect-square object-cover"
-                        src={acomodacao.photos[0].source}
-                        alt={acomodacao.photos[0].description}
-                        width={300}
-                        height={300}
+                    <Acomodacao
+                        local={acomodacao.location.description}
+                        anfitriao={acomodacao.host}
+                        data={acomodacao.date}
+                        preco={acomodacao.price}
+                        periodo={acomodacao.slug}
+                        avaliacao={acomodacao.rating}
+                        preferido={acomodacao.hasBadge}
                     >
-                    </Image>
+                        <Image className="w-full aspect-square object-cover"
+                            src={acomodacao.photos[0].source}
+                            alt={acomodacao.photos[0].description}
+                            width={300}
+                            height={300}
+                        >
+                        </Image>
+                    </Acomodacao>
                 </div>
 
             ))}
@@ -2279,4 +2290,4 @@ const Acomodacao = () => {
     )
 }
 
-export default Acomodacao
+export default Acomodacoes
