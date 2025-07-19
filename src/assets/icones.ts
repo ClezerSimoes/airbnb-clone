@@ -1,2 +1,5 @@
-import { IconUserCircle } from "@tabler/icons-react";
-export {IconUserCircle}
+export { 
+    IconUserCircle,
+    IconSearch,
+    IconAdjustmentsHorizontal
+} from "@tabler/icons-react";

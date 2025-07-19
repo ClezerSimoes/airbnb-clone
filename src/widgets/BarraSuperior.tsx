@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Logo from "@/components/Logo"
 import BotaoIcone from "@/components/BotaoIcone"
-import { IconUserCircle } from "@tabler/icons-react"
+import { IconUserCircle } from "@/assets/icones"
 
 
 

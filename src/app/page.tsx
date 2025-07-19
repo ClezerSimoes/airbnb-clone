@@ -1,16 +1,23 @@
+import Acomodacao from "@/widgets/Acomodacao";
 import BarraPesquisa from "@/widgets/BarraPesquisa";
 import BarraSuperior from "@/widgets/BarraSuperior";
+import NavegacaoAbasHorizontal from "@/widgets/NavegacaoAbasHorizontal";
 
 
 export default function Home() {
   return (
     <>
-      <div>
+      <header> {/* Cabeçalho */}
         <BarraSuperior/>
         <BarraPesquisa/>
-      </div>
-      <div>Área Conteúdo</div>
-      <div>Área Rodapé</div>
+      </header> {/* Cabeçalho */}
+
+      <main className="mt-10">
+        <NavegacaoAbasHorizontal/>
+        <Acomodacao/>
+      </main> {/* Conteúdo */}
+
+      <footer>Área Rodapé</footer>{/* Rodapé */}
     </>
   );
 }
