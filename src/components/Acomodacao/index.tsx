@@ -6,17 +6,19 @@ interface AcomodacaoProps {
     anfitriao: string
     data: string
     preco: number
-    periodo: string
     avaliacao: number
-    preferido:boolean
+    preferido: boolean
 }
 
 const Acomodacao = (props: AcomodacaoProps) => {
     return (
         <figure className="relative">
             <div className="absolute w-full flex flex-row justify-between items-center p-4">
-                <span className="bg-white rounded-full p-2 font-semibold ">Preferido dos hóspedes</span>
-
+                <div>
+                    {props.preferido && (
+                        <span className="bg-white rounded-full p-2 font-semibold ">Preferido dos hóspedes</span>
+                    )}
+                </div>
                 <IconHeartFilled className="stroke-white opacity-80"
                     aria-label="Favoritos"
                     size={30}
@@ -47,7 +49,7 @@ const Acomodacao = (props: AcomodacaoProps) => {
                 </div>
 
                 <div className="font-semibold">
-                    {`R$ `}{props.preco} 
+                    {`R$ `}{props.preco}
                 </div>
 
             </figcaption>

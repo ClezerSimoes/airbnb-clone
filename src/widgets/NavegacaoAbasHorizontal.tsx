@@ -131,7 +131,7 @@ const icones = [
 
 const NavegacaoAbasHorizontal = () => {
     return (
-        <div className="flex flex-row items-center">
+        <div className="container mx-auto flex flex-row items-center">
 
             {/*  */}
             <Swiper

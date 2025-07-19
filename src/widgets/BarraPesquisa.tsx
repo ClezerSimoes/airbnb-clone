@@ -3,6 +3,8 @@ import { IconSearch } from "../assets/icones"
 const BarraPesquisa = () => {
   return (
     <div className="
+        container
+        mx-auto
         border
         border-gray-200 
         flex 
@@ -11,8 +13,7 @@ const BarraPesquisa = () => {
         px-4 
         py-2 
         w-full 
-        max-w-2xl 
-        mx-auto
+        max-w-2xl
         shadow-lg
         shadow-gray-200
     ">

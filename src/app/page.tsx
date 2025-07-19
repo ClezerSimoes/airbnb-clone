@@ -2,25 +2,27 @@ import Acomodacoes from "@/widgets/Acomodacoes";
 import BarraPesquisa from "@/widgets/BarraPesquisa";
 import BarraSuperior from "@/widgets/BarraSuperior";
 import NavegacaoAbasHorizontal from "@/widgets/NavegacaoAbasHorizontal";
+import Rodape from "@/widgets/Rodape";
 
 
 export default function Home() {
   return (
     <>
-      <div className="container mx-auto">
-        <header> {/* Cabeçalho */}
-          <BarraSuperior />
-          <BarraPesquisa />
-        </header> {/* Cabeçalho */}
+      <header> {/* Cabeçalho */}
+        <BarraSuperior />
+        <BarraPesquisa />
+      </header> {/* Cabeçalho */}
 
-        <main className="mt-10">
-          <NavegacaoAbasHorizontal />
-          <Acomodacoes />
-        </main> {/* Conteúdo */}
+      <hr className="mt-5"/>
 
-        <footer>Área Rodapé</footer>{/* Rodapé */}
-      </div>
+      <main className="mt-10">
+        <NavegacaoAbasHorizontal />
+        <Acomodacoes />
+      </main> {/* Conteúdo */}
+
+      <footer className="bg-gray-100">
+        <Rodape />
+      </footer>{/* Rodapé */}
     </>
   );
 }
- 
