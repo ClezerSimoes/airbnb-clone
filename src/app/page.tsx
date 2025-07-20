@@ -1,3 +1,4 @@
+import { fetchData } from "@/utils/Api";
 import Acomodacoes from "@/widgets/Acomodacoes";
 import BarraPesquisa from "@/widgets/BarraPesquisa";
 import BarraSuperior from "@/widgets/BarraSuperior";
@@ -5,7 +6,10 @@ import NavegacaoAbasHorizontal from "@/widgets/NavegacaoAbasHorizontal";
 import Rodape from "@/widgets/Rodape";
 
 
-export default function Home() {
+export default async function Home() {
+
+  const dados = await fetchData()
+
   return (
     <>
       <header> {/* Cabeçalho */}
@@ -16,8 +20,8 @@ export default function Home() {
       <hr className="mt-5"/>
 
       <main className="mt-10">
-        <NavegacaoAbasHorizontal />
-        <Acomodacoes />
+        <NavegacaoAbasHorizontal icons={dados.icons}/>
+        <Acomodacoes accommodation={dados.accommodation} />
       </main> {/* Conteúdo */}
 
       <footer className="bg-gray-100">

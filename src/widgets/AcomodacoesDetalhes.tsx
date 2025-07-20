@@ -10,12 +10,19 @@ import {
   IconAlarmSmoke,
   IconDog,
 } from "@/assets/icones"
+import { Accommodation } from "@/types/AirbnbDados"
 
+interface AcomodacoesDetalhesProps {
+  accommodation: Accommodation
+}
 
-const AcomodacoesDetalhes = () => {
+const AcomodacoesDetalhes = (props: AcomodacoesDetalhesProps) => {
+
+  const acomodacao = props.accommodation
+
   return (
     <div className="w-full py-4">
-      <h2 className="text-xl font-semibold">Espaço inteiro: casa de campo em Minas Gerais</h2>
+      <h2 className="text-xl font-semibold">{acomodacao.location.description}</h2>
 
       <ul className="flex flex-row gap-2">
         <li>10 Hóspedes</li>
